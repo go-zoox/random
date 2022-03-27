@@ -1,10 +1,14 @@
 package random
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestString(t *testing.T) {
-	repeat(1000, func(i int) {
+	repeat(10, func(i int) {
 		str := String(i)
+		fmt.Println("xxx:", str)
 		if len(str) != i {
 			t.Error("String() should return a string of length 10")
 		}
