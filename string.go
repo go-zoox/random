@@ -12,9 +12,10 @@ func String(length int, letters ...string) string {
 		lettersX = letters[0]
 	}
 
+	lettersXLength := len(lettersX)
 	b := make([]byte, length)
 	for i := range b {
-		b[i] = LETTERS[rand.Intn(len(lettersX))]
+		b[i] = lettersX[rand.Intn(lettersXLength)]
 	}
 	return string(b)
 }
